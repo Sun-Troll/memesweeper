@@ -18,6 +18,7 @@ private:
 		void SpawnMeme();
 		bool HasMeme() const;
 		void Draw(Vei2& screenPos, Graphics& gfx) const;
+
 	private:
 		State state = State::Hidden;
 		bool hasMeme = false;

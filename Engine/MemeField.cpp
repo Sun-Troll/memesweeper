@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <random>
 #include "SpriteCodex.h"
+#include "Vei2.h"
 
 void MemeField::Tile::SpawnMeme()
 {
@@ -57,6 +58,14 @@ MemeField::MemeField(int nMemes)
 		} while (TileAt(spawnPos).HasMeme());
 
 		TileAt(spawnPos).SpawnMeme();
+	}
+
+	//reveal test
+	for (int i = 0; i < 120; i++)
+	{
+		//TileAt({ xDist(rng), yDist(rng) });
+		TileAt(Vei2(xDist(rng), yDist(rng)));
+		// why doesn't the top work seems to work on chili
 	}
 }
 
